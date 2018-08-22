@@ -1,0 +1,363 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Nigel's Custom styles start here */
+
+/* Main body font  */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3c49;
+	font-size:16px;
+}
+
+/* default sizing of images */
+
+img {
+	max-width: 100%;
+}
+
+/* Main Page Wrapper */
+
+.wrapper {
+  padding: 0 1.25em;
+}
+
+@media screen and (min-width: 72.5em) {
+
+  .wrapper {
+    max-width: 72.5em;
+    margin: 0 auto;
+  }
+
+}
+
+/* Header */
+
+.header {
+  padding: 1.25em 0;
+  border-bottom: 0.1875em solid #7d97ad;
+  margin-bottom: 2.5em;
+}
+
+.header__logo {
+  width: 2.5em;
+  margin-bottom: 0.625em;
+}
+
+.header__masthead-title {
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.25em; /* RELATIVE TO FONT SIZE OF THE PARENT */
+  text-transform: uppercase;
+}
+
+.header_masthead-subtitle {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 28.125em) {
+
+  .header {
+    padding: 2.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    margin-bottom: 0;
+	}
+
+  .header__masthead {
+    text-align: right;
+  }
+
+}
+
+@media screen and (min-width: 40.625em){
+
+  .header__logo {
+    width: auto;
+  }
+
+  .header__masthead-title {
+    font-size: 4em;
+  }
+
+  .header_masthead-subtitle {
+    font-size: 1.5em;
+  }
+
+}
+
+
+/* Hero Project */
+
+.hero-project {
+  margin-bottom: 2.5em;
+}
+
+.hero-project__image {
+  width: 100%;
+}
+
+
+/* Project Grid */
+
+.project-grid {
+  margin-bottom: 1.5625em;
+}
+
+.project-grid__heading {
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.57em;
+  color: #7d97ad;
+  flex: 1 1 100%;
+}
+
+.project-grid__heading--hero {
+  color: #fff;
+  padding: 0.3125em 0.3125em 0.46875em;
+  background-color: #02b3e4;
+  margin-bottom: 0.1875em;
+}
+
+@media screen and (min-width: 40.625em) {
+
+  .project-grid__heading {
+    font-size: 2.75em;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
+/* Project Block */
+
+.project-block {
+  margin-bottom: 1.5625em;
+  text-decoration: none;
+  color: #2d3c49;
+  display: block;
+}
+
+.project-block:hover{
+  text-decoration: underline;
+}
+
+.project-block + .project-block {
+  margin-top: 2.6025em;
+}
+
+.project-block__title {
+  font-size: 2em;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project-block__image {
+  margin-bottom: 1.5625em;
+}
+
+@media screen and (min-width: 40.625em){
+
+  .project-block__title {
+    font-size: 2.75em;
+  }
+
+  .project-block {
+    width: calc((100% / 2) - 1em);
+  }
+
+  .project-block + .project-block {
+    margin-top: 0;
+  }
+
+  .project-block:first-of-type {
+    margin-right: 2em;
+  }
+
+}
+
+@media screen and (min-width: 48em){
+
+  .project-block {
+    width: calc((100% / 3) - 1.375em);
+  }
+
+  .project-block:first-of-type {
+    margin-right: 0;
+  }
+
+  .project-block + .project-block {
+    margin-left: 2.0625em;
+  }
+
+}
+
+/* Footer */
+
+.footer{
+  background-color: #02b3e4;
+  padding: 1.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__link{
+  color: #fff;
+  font-size: 0.8125em;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__link + .footer__link {
+  margin-top: 0.625em;
+}
+
+.footer__link i{
+  margin-right: 0.625em;
+}
+
+@media screen and (min-width: 40.625em) {
+
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer__link + .footer__link {
+    margin-top: 0;
+    margin-left: 1.25em;
+  }
+
+}
+
+/* Fontello fonts added last to prevent render blocking */
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?30538772');
+  src: url('../font/fontello.eot?30538772#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?30538772') format('woff2'),
+       url('../font/fontello.woff?30538772') format('woff'),
+       url('../font/fontello.ttf?30538772') format('truetype'),
+       url('../font/fontello.svg?30538772#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?30538772#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-twitter:before { content: '\e801'; } /* '' */
+.icon-linkedin:before { content: '\e802'; } /* '' */
